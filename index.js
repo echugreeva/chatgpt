@@ -10,11 +10,11 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8800;
 
 app.post("/ask", async (req, res) => {
   const prompt = req.body.prompt;
-
+ 
   try {
     if (prompt == null) {
       throw new Error("Uh oh, no prompt was provided");
